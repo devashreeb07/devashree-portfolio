@@ -1,0 +1,407 @@
+
+/* ================================
+   GLOBAL STYLES
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #faf9ff;
+    color: #29243b;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+/* ================================
+   NAVIGATION
+================================ */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    background: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 15px rgba(70, 45, 120, 0.08);
+}
+
+.navbar h2 {
+    color: #6c43b5;
+    font-size: 25px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 28px;
+}
+
+.navbar ul li a {
+    color: #49415e;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #8b5cf6;
+}
+
+/* ================================
+   HERO SECTION
+================================ */
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 80px 8%;
+    background: linear-gradient(135deg, #f1eaff, #ffffff, #f7f0ff);
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.hero h1 {
+    font-size: 52px;
+    line-height: 1.2;
+    color: #352052;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #8b5cf6;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #625873;
+    margin-bottom: 25px;
+}
+
+.hero-card {
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 12px 35px rgba(108, 67, 181, 0.15);
+    max-width: 350px;
+    border: 1px solid #e9ddff;
+}
+
+.hero-card h3 {
+    color: #6c43b5;
+    margin-bottom: 15px;
+}
+
+.hero-card p {
+    font-size: 15px;
+}
+
+/* ================================
+   BUTTONS
+================================ */
+
+.btn,
+button {
+    display: inline-block;
+    background: #7c4dce;
+    color: #ffffff;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover,
+button:hover {
+    background: #5d32a5;
+    transform: translateY(-3px);
+}
+
+/* ================================
+   INTRO STRIP
+================================ */
+
+.intro-strip {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 35px;
+    padding: 25px;
+    background: #6c43b5;
+    color: #ffffff;
+    text-align: center;
+}
+
+.intro-strip p {
+    font-weight: 500;
+}
+
+/* ================================
+   GENERAL SECTIONS
+================================ */
+
+.section {
+    padding: 80px 8%;
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 35px;
+    color: #352052;
+    margin-bottom: 40px;
+}
+
+.section h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #a78bfa;
+    margin: 12px auto;
+    border-radius: 5px;
+}
+
+/* ================================
+   ABOUT
+================================ */
+
+.about-section {
+    background: #ffffff;
+}
+
+.about-section p {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+    color: #625873;
+    font-size: 17px;
+}
+
+/* ================================
+   SKILLS
+================================ */
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.skill-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #e9ddff;
+    box-shadow: 0 5px 20px rgba(108, 67, 181, 0.07);
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 25px rgba(108, 67, 181, 0.15);
+}
+
+.skill-card h3 {
+    color: #6c43b5;
+    margin-bottom: 12px;
+}
+
+.skill-card p {
+    color: #625873;
+}
+
+/* ================================
+   PROJECTS
+================================ */
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid #e9ddff;
+    box-shadow: 0 5px 20px rgba(108, 67, 181, 0.08);
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(108, 67, 181, 0.16);
+}
+
+.project-card h3 {
+    color: #6c43b5;
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    color: #625873;
+    margin-bottom: 15px;
+}
+
+.project-card a {
+    display: inline-block;
+    color: #7c4dce;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.project-card a:hover {
+    color: #4c1d95;
+    text-decoration: underline;
+}
+
+.featured-project {
+    border: 2px solid #a78bfa;
+    background: linear-gradient(145deg, #ffffff, #f5efff);
+}
+
+/* ================================
+   CERTIFICATIONS
+================================ */
+
+.certificate-list {
+    max-width: 800px;
+    margin: auto;
+}
+
+.certificate-list ul {
+    list-style: none;
+}
+
+.certificate-list li {
+    background: #ffffff;
+    margin-bottom: 15px;
+    padding: 18px 25px;
+    border-radius: 10px;
+    border-left: 5px solid #8b5cf6;
+    box-shadow: 0 4px 15px rgba(108, 67, 181, 0.07);
+    color: #49415e;
+}
+
+/* ================================
+   CONTACT
+================================ */
+
+.contact-section {
+    background: #f0e8ff;
+    text-align: center;
+}
+
+.contact-section p {
+    margin-bottom: 15px;
+    color: #625873;
+}
+
+.contact-section a {
+    color: #6c43b5;
+    font-weight: 600;
+}
+
+.contact-section a:hover {
+    text-decoration: underline;
+}
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    background: #352052;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* ================================
+   RESPONSIVE DESIGN
+================================ */
+
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero-card {
+        max-width: 500px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .section {
+        padding: 55px 6%;
+    }
+
+    .section h2 {
+        font-size: 28px;
+    }
+
+    .navbar ul {
+        gap: 10px;
+        font-size: 14px;
+    }
+
+    .intro-strip {
+        gap: 12px;
+    }
+}
